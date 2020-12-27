@@ -1,0 +1,46 @@
+:root {
+  --normal-status:#eee;
+  --over-status: #ccc;
+  --active-status: #b4b2b2;
+  --opacity-border: rgba(0, 0, 0, 0);
+  --over-border: #888;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  list-style: none;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.drag-item {
+  box-sizing: border-box;
+  height: 36px;
+  padding: 2px;
+  border: 2px solid var(--opacity-border);
+  background-color: var(--normal-status);
+  font: 14px/2 Consolas, Georgia;
+  cursor: pointer;
+}
+
+.dragover-top {
+  border-top-color: var(--over-border);
+}
+
+.dragover-bottom {
+  border-bottom-color: var(--over-border);
+}
+
+.drag-item:hover, .dragover {
+  background-color: var(--over-status);
+  /* border-color: var(--over-status); */
+}
+
+.drag-item:active {
+  background-color: var(--active-status);
+  /* border-color: var(--active-status); */
+}
